@@ -2,31 +2,62 @@
   &-1
     animation: float1 3.5s ease-in-out infinite alternate
     position: absolute
-    top: 20%
-    right: 10%
-  &-2
-    animation: float1 2.8s ease-in-out infinite alternate
-    position: absolute
-    top: 51%
-    right: 30%
+    top: 15%
+    right: 35%
+
 
 @keyframes float1
   0%
     transform: translateY(20px)
+
   100%
     transform: translateY(0px)
-  
-.banner-principal .tarjeta
-  background-position: left 50% !important
 
-.banner-principal__row .banner-principal__img
-  width: 400px !important  
 
-.titulo-principal.color-acento-contenido .titulo-principal__numero span
-  color: white !important
 
-.banner-interno__titulo__icono i
-  color: $color-primario
+    
+///////// Card hover --------------------------------------
+.crd_hover_txt
+  position: relative  
+  padding: 0 !important
+  overflow: hidden !important  
+  background-color: $color-primario
+  &:hover    
+    .crd_hover_txt--body   
+      transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1) 
+      transform: translateY(0)
 
-figcaption
-  font-weight: normal
+  .crd_hover_txt--body
+    position: absolute
+    padding: 1.5rem
+    bottom: 0    
+    transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1)
+    transform: translateY(calc( 100% - 3.85rem ))
+    background-color: $color-primario
+    color: #FFFFFF
+    height-min: 70px 
+  @media (min-width:1200px) and (max-width:1400px)  
+    .crd_hover_txt--body
+      p
+        font-size: 0.85em
+  .crd_hover_txt--img
+    img
+      width: 50%
+      margin-left: auto
+      margin-right: auto
+  .crd_hover_txt--body > *
+    color: #FFFFFF
+
+
+.tema4
+  .cajon-custom.color-secundario
+    background-color: $color-secundario
+    p
+      color: #FFFFFF
+      
+.tarjeta.tarjeta--gris-2
+  background-color: #ECE3FF
+
+.tabla-t2
+  th,td
+    padding: 0.3em
